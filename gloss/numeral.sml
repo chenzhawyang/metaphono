@@ -1,0 +1,3 @@
+structure Numeral = struct
+
+end
