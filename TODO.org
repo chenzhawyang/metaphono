@@ -1,0 +1,10 @@
+* phonology
+* 
+
+* morphology
+** TODO start implementing latin morphology
+
+* history
+** TODO implement proto-romance changes
+
+* gloss
