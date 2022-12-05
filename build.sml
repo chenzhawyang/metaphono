@@ -1,3 +1,9 @@
-val load = CM.autoload "sources.cm"
+val load = CM.autoload "./src/metaphono.cm"
 
-val build = CM.make "sources.cm"
+fun build () =
+    let val cmd = "ml-build ./src/metaphono.cm Main.main ./bin/main"
+    in OS.Process.system cmd end
+
+fun run () = 
+    let val cmd = "sml @SMLload ./bin/main.x86-linux"
+    in OS.Process.system cmd end

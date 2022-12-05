@@ -1,0 +1,13 @@
+Group
+    structure Vowel
+    structure Consonant
+    structure Syllable
+    structure PWord
+    structure Rule
+    signature RULE
+    structure SoundChange
+    functor SoundChangeFun
+is
+segment.sml
+syllable.sml
+sound-change.sml

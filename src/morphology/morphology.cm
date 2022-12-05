@@ -1,0 +1,10 @@
+Group
+    structure Noun
+    structure Lemma
+    structure Reflex
+is
+noun.sml
+lemma.sml
+reflex.sml
+
+../phonology/phonology.cm
