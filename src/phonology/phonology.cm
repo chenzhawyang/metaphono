@@ -1,12 +1,14 @@
 Group
     structure Vowel
     structure Consonant
-    structure Syllable
+    structure Seg
+    structure Syll
     structure PWord
+
+    structure Syllabism
+    structure Syllabism_L
+    structure Disyllabism
     structure Rule
-    signature RULE
-    structure SoundChange
-    functor SoundChangeFun
 is
 segment.sml
 syllable.sml

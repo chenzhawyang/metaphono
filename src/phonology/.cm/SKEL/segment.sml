@@ -1,2 +1,2 @@
 Skeleton 5
-d3aä¢Vowel"è0aä¢Consonant"ÿad"Seg"h1c2egp1ÿegp1ÿ
+d5Caã¢VOWEL"è0aä¢Vowel"jÿgp1ÿaã¢CONSONANT"ÿaä¢Consonant"jÿgp1ÿ ad"Seg"h2begp1ÿæ0begp1ÿ/ÿN

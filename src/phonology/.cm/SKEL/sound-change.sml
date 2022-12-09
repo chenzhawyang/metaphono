@@ -1,2 +1,2 @@
 Skeleton 5
-d6aдўRule"h1езр±дўSyllable"CaгўRULE"и0aдўSoundChange"h1c2езр±дўPWord"езр±яbc2я9езр±я'aгўSOUND_CHANGE"я$aдўSCUtils"h1c3яяЃяЃae"SoundChangeFun"i1aяgp1яjh2c2яЃegp1яЃ)fяЃgp1яЃN
+d9f5Cd"Coda"d"Syll"d"Onset"d"PWord"d"Nucleus"NaгўSYLLABISM"и0ad"Syllabism"jя;gp1я/aгўSYLLABISM_L"я;Cad"Syllabism_L"jя;gp1яЃaгўDISYLLABISM"я;ad"Disyllabism"jя;gp1яЃ=aгўRULE"я;ad"Rule"jя;gp1я‚&N

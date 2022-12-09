@@ -1,6 +1,4 @@
-local open SoundChange in
-    signature HISTORY = sig
-        val epoch : string
-        val history : soundChange list
-    end
+signature EPOCH = sig
+    val name : string
+    val history : Rule.t list
 end
