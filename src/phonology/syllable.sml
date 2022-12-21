@@ -32,6 +32,7 @@ structure Onset : ONSET = struct
     end
 
     fun is_complex (cons1, cons2) =
+        (* this would reject labiodentals, i.e. Seg.f *)
         if (is_stop cons1 orelse is_ph cons1) andalso (is_medial cons2)
         then if (cons2 = Seg.r)
             then true
@@ -67,6 +68,10 @@ signature NUCLEUS = sig
                | Diphthong of Vowel.t * Vowel.t
                | LongVowel of Vowel.t
 
+    val is_yod : Vowel.t -> bool
+    val has_yod : t -> bool
+    val is_glide : Vowel.t -> bool
+
     val mk : Vowel.t list -> t
 
     val toStr : t -> string
@@ -86,6 +91,9 @@ structure Nucleus : NUCLEUS = struct
                     else Diphthong (x, y)
       | mk _ = raise BadNuc
 
+    fun is_yod v = (v = Seg.i)
+    fun has_yod (Diphthong (v1, v2)) = is_yod v1
+      | has_yod _ = false
     fun is_glide v = (v = Seg.i orelse v = Seg.u)
 
     fun toStr (Monophthong v) = Vowel.toStr v

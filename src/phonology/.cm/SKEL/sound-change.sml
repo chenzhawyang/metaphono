@@ -1,2 +1,2 @@
 Skeleton 5
-d9f5Cd"Coda"d"Syll"d"Onset"d"PWord"d"Nucleus"Naã¢SYLLABISM"è0ad"Syllabism"jÿ;gp1ÿ/aã¢SYLLABISM_L"ÿ;Cad"Syllabism_L"jÿ;gp1ÿaã¢DISYLLABISM"ÿ;ad"Disyllabism"jÿ;gp1ÿ=aã¢RULE"ÿ;ad"Rule"jÿ;gp1ÿ‚&N
+d9f5Cd"Syll"d"Onset"d"Nucleus"d"Coda"d"PWord"Naã¢SYLLABISM"è0ad"Syllabism"jÿ;gp1ÿ/aã¢SYLLABISM_L"ÿ;Cad"Syllabism_L"jÿ;gp1ÿaã¢DISYLLABISM"ÿ;ad"Disyllabism"jÿ;gp1ÿ=aã¢RULE"ÿ;ad"Rule"jÿ;gp1ÿ‚&N

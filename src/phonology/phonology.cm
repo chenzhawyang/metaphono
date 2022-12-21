@@ -2,6 +2,9 @@ Group
     structure Vowel
     structure Consonant
     structure Seg
+    structure Onset
+    structure Nucleus
+    structure Coda
     structure Syll
     structure PWord
 

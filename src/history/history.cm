@@ -1,6 +1,27 @@
-Group 
+Group
+    signature CHANGE
+    structure Changes
+
+    structure PrRom
+    structure WRom
+    structure OSp
+    structure MSp
+
+    structure Reflex
+    structure Gloss
+    structure Lexicon
 is
-PrRom.sml
+epoch.sml
 history.sml
+changes-utils.sml
+changes.sml
+
+PrRom.sml
+WRom.sml
+OSp.sml
+MSp.sml
+
+reflex.sml
+lexicon.sml
 
 ../phonology/phonology.cm

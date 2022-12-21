@@ -5,7 +5,6 @@ main.sml
 
 phonology/phonology.cm
 history/history.cm
-lexicon/lexicon.cm
 
 $/basis.cm
 $/smlnj-lib.cm

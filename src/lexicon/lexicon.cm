@@ -1,6 +1,0 @@
-Group
-    structure Numeral
-is
-numeral.sml
-
-../phonology/phonology.cm

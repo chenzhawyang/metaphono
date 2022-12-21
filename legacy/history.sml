@@ -99,7 +99,7 @@ fun elide_m_subst cod
                       then ZeroCoda
                       else cod
         | _ => cod
-                  
+
 val elide_m_rewrite = Codism elide_m_subst
 
 val elide_m = let val syllabism = mkSyllabism elide_m_rewrite WordFinal

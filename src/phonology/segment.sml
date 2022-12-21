@@ -1,4 +1,6 @@
 signature VOWEL = sig
+    exception BadVowel
+
     datatype height = Low
                     | LowMid
                     | Mid
@@ -15,6 +17,8 @@ signature VOWEL = sig
 end
 
 structure Vowel : VOWEL = struct
+    exception BadVowel
+
     datatype height = Low
                     | LowMid
                     | Mid
@@ -36,10 +40,12 @@ structure Vowel : VOWEL = struct
       | toStr (Vowel (LowMid, Front)) = "ɛ"
       | toStr (Vowel (HighMid, Back)) = "ʊ"
       | toStr (Vowel (LowMid, Back)) = "ɔ"
-      | toStr _ = "()"
+      | toStr _ = raise BadVowel
 end
 
 signature CONSONANT = sig
+    exception BadConsonant
+
     datatype voice = Voiced | Voiceless
 
     datatype place = Bilabial | Labiodental
@@ -65,6 +71,8 @@ signature CONSONANT = sig
 end
 
 structure Consonant : CONSONANT = struct
+    exception BadConsonant
+
     datatype voice = Voiced | Voiceless
 
     datatype place = Bilabial | Labiodental
@@ -122,7 +130,7 @@ structure Consonant : CONSONANT = struct
       | toStr (Consonant (Voiced, Dental, Trill)) = "r"
       | toStr (Consonant (Voiced, Dental, Tap)) = "ɾ"
       | toStr (Consonant (Voiceless, Glottal, NonSibil)) = "h"
-      | toStr _ = "()"
+      | toStr _ = raise BadConsonant
 end
 
 structure Seg = struct

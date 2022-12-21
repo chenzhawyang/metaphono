@@ -1,0 +1,2 @@
+Skeleton 5
+d8f6ä¢Syll"Cä¢Vowel"ä¢Nucleus"d"PWord"ä¢Consonant"ä¢Rule"Naã¢CHANGE"è0ac"VOCALISM"h2åçğ±ÿ;f2ÿÿCac"CONSONANTISM"h2ÿf1ÿ&ae"PalatalizationFun"i2áä¢Config"ÿf7ÿä¢Onset"Cÿÿ‚ÿ&ÿ2ä¢Syllabism"Njÿh2ÿf3ÿÿ‚"ÿ&ae"DiphthongizationFun"i2ÿ‚f5Cÿÿÿ‚ÿ2ÿ‚4Njÿh2ÿf1ÿae"LenitionFun"i²ÿ‚æ¶ÿÃÿ‚"ä¢Coda"ÿ‚ÿ2ÿ‚4Njÿh2ÿf2ÿ‚"ä¢Disyllabism"ae"DegeminationFun"iÿ„jÿh2ÿf2ÿ…ÿ„(N

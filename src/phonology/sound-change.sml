@@ -1,7 +1,7 @@
 signature SYLLABISM = sig
-    datatype rewrite = Onsetism of (Onset.t -> Onset.t)
-                     | Nuxism of (Nucleus.t -> Nucleus.t)
-                     | Codism of (Coda.t -> Coda.t)
+    datatype rewrite = Onsetism of Onset.t -> Onset.t
+                     | Nuxism of Nucleus.t -> Nucleus.t
+                     | Codism of Coda.t -> Coda.t
 
     datatype context = NoContext
                      | Predicate of (Syll.t -> bool)
@@ -17,9 +17,9 @@ signature SYLLABISM = sig
 end
 
 structure Syllabism : SYLLABISM = struct
-    datatype rewrite = Onsetism of (Onset.t -> Onset.t)
-                     | Nuxism of (Nucleus.t -> Nucleus.t)
-                     | Codism of (Coda.t -> Coda.t)
+    datatype rewrite = Onsetism of Onset.t -> Onset.t
+                     | Nuxism of Nucleus.t -> Nucleus.t
+                     | Codism of Coda.t -> Coda.t
 
     datatype context = NoContext
                      | Predicate of (Syll.t -> bool)
@@ -84,10 +84,9 @@ end
 
 signature DISYLLABISM = sig
     type rewrite = (Syll.t -> Syll.t) * (Syll.t -> Syll.t)
-    type context = (Syll.t -> bool) * (Syll.t -> bool)
+    type context = (Syll.t * Syll.t) -> bool
     type t = rewrite * context
 
-    val applicable : context -> (Syll.t * Syll.t) -> bool
     val apply : rewrite -> (Syll.t * Syll.t) -> (Syll.t * Syll.t)
 
     val lift : t -> PWord.t -> PWord.t
@@ -95,13 +94,8 @@ end
 
 structure Disyllabism : DISYLLABISM = struct
     type rewrite = (Syll.t -> Syll.t) * (Syll.t -> Syll.t)
-    type context = (Syll.t -> bool) * (Syll.t -> bool)
+    type context = (Syll.t * Syll.t) -> bool
     type t = rewrite * context
-
-    fun applicable (pred1, pred2) (syll1, syll2) =
-        let val context1 = pred1 syll1
-            val context2 = pred2 syll2
-        in context1 andalso context2 end
 
     fun apply (f1, f2) (syll1, syll2) = (f1 syll1, f2 syll2)
 
@@ -109,7 +103,7 @@ structure Disyllabism : DISYLLABISM = struct
         case pword
          of [] => []
           | [x] => pword
-          | (x :: y :: xs) => if applicable context (x, y)
+          | (x :: y :: xs) => if context (x, y)
                               then let val (x', y') = apply rewrite (x, y)
                                    in x' :: lift disyllabism (y' :: xs) end
                               else x :: lift disyllabism (y :: xs)
@@ -120,7 +114,7 @@ signature RULE = sig
                      | Syllabism_L of Syllabism_L.t
                      | Disyllabism of Disyllabism.t
 
-    datatype t = Rule of string * (PWord.t -> PWord.t)
+    datatype t = T of string * (PWord.t -> PWord.t)
 
     val eval : rewrite -> (PWord.t -> PWord.t)
 end
@@ -130,7 +124,7 @@ structure Rule : RULE = struct
                      | Syllabism_L of Syllabism_L.t
                      | Disyllabism of Disyllabism.t
 
-    datatype t = Rule of string * (PWord.t -> PWord.t)
+    datatype t = T of string * (PWord.t -> PWord.t)
 
     fun eval (Syllabism syllabism) = Syllabism.lift syllabism
       | eval (Syllabism_L syllabism_l) = Syllabism_L.lift syllabism_l
