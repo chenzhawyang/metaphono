@@ -1,5 +1,5 @@
 structure History : sig 
-    val historia : (string * Rule.t list) list
+    val historia : Rule.t list list
     val pidal : Reflex.t -> Reflex.t
 end = struct
     val historia =
@@ -14,5 +14,5 @@ end = struct
             , MSp ]
         end            
 
-    val pidal = Reflex.apply_chg_ll historia
+    val pidal = Reflex.apply_ll historia
 end

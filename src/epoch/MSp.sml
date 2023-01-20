@@ -1,7 +1,7 @@
 structure MSp = struct
     open Changes
 
-    val name = "Old Spanish -> Modern Spanish"
+    (* val name = "Old Spanish -> Modern Spanish" *)
 
     val consonantal_shifts =
         let val betacism = Betacism.rule
@@ -26,5 +26,5 @@ structure MSp = struct
 
     val history = consonantal_shifts
 
-    val epoch = (name, history)
+    val epoch = history
 end

@@ -1,7 +1,7 @@
 structure OSp = struct
     open Changes
 
-    val name = "Western Romance -> Old Spanish"
+    (* val name = "Western Romance -> Old Spanish" *)
 
     val vowel_shifts = 
         let val e_diphthongization_2 = E_Diphthongization_II.rule
@@ -34,5 +34,5 @@ structure OSp = struct
                   @ consonantal_shifts
                   @ [apocope]
 
-    val epoch = (name, history)
+    val epoch = history
 end

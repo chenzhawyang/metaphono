@@ -1,7 +1,7 @@
 structure PrRom = struct
     open Changes
 
-    val name = "Latin -> Proto-Romance"
+    (* val name = "Latin -> Proto-Romance" *)
 
     val early_consonantal_shifts = 
         let val elide_m = ElideWordFinalConsonant.mk Seg.m
@@ -53,5 +53,5 @@ structure PrRom = struct
                   @ consonantal_shifts
                   @ palatalizations
 
-    val epoch = (name, history)
+    val epoch = history
 end

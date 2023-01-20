@@ -1,7 +1,7 @@
 structure WRom = struct
     open Changes
 
-    val name = "Proto-Romance -> Western Romance"
+    (* val name = "Proto-Romance -> Western Romance" *)
 
     val vowel_shifts = 
         let val e_diphthongization = E_Diphthongization.rule
@@ -20,5 +20,5 @@ structure WRom = struct
     val history = vowel_shifts
                   @ consonantal_shifts
 
-    val epoch = (name, history)
+    val epoch = history
 end
