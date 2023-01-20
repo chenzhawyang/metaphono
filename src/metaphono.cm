@@ -1,10 +1,14 @@
 Group 
+    structure Main
 is
-
 main.sml
 
-phonology/phonology.cm
-history/history.cm
+./phonology/phonology.cm
+./sound-change/sound-change.cm
+./reflex/reflex.cm
+./epoch/epoch.cm
+./history/history.cm
+./utils/utils.cm
 
 $/basis.cm
 $/smlnj-lib.cm

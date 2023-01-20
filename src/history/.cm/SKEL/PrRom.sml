@@ -1,2 +1,0 @@
-Skeleton 5
-ad"PrRom"jh2egp1d"Changes"f5Cd"Fortition"d"Seg"d"Monophthongization"d"T_Palatalization"d"K_Palatalization"Cd"Deaspiration"d"D_Palatalization"d"AtonicMerger"d"GreatMerger"d"LateralPalatalization"Cd"LossOfQuant"d"Prothesis"d"ElideWordFinalConsonant"d"G_Palatalization"d"NasalPalatalization"Ngp1c"EPOCH"

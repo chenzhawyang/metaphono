@@ -1,4 +1,39 @@
 :etymon:
+'uː.num
+:era:
+Latin -> Proto-Romance
+:change:
+'uː.num => 'uː.nu (Elision of Word-Final [m])
+'uː.nu => 'u.nʊ (Loss of Vowel Quantity)
+'u.nʊ => 'u.no (Great Merger)
+
+:etymon:
+'de.kem
+:era:
+Latin -> Proto-Romance
+:change:
+'de.kem => 'de.ke (Elision of Word-Final [m])
+'de.ke => 'dɛ.kɛ (Loss of Vowel Quantity)
+'dɛ.kɛ => 'dɛ.ke (Atonic Merger)
+'dɛ.ke => 'dɛ.tʃe (Palatalization of [k])
+:era:
+Proto-Romance -> Western Romance
+:change:
+'dɛ.tʃe => 'di̯e.tʃe (Diphthongization of [ɛ])
+:era:
+Western Romance -> Old Spanish
+:change:
+'di̯e.tʃe => 'di̯e.tse (Fronting of [tʃ])
+'di̯e.tse => 'di̯e.dze (Lenition)
+'di̯e.dze => 'di̯edz (Apocope)
+:era:
+Old Spanish -> Modern Spanish
+:change:
+'di̯edz => 'di̯ez̪ (Deaffrication of Dental Affricates)
+'di̯ez̪ => 'di̯es̪ (Devoicing of Sibilants)
+'di̯es̪ => 'di̯eθ (Desibilation of Dental Sibilants)
+
+:etymon:
 'lu.pum
 :era:
 Latin -> Proto-Romance
@@ -16,26 +51,26 @@ Western Romance -> Old Spanish
 'lo.bo => 'lo.βo (Lenition)
 
 :etymon:
-weː.'naː.tum
+'weː.na.tum
 :era:
 Latin -> Proto-Romance
 :change:
-weː.'naː.tum => weː.'naː.tu (Elision of Word-Final [m])
-weː.'naː.tu => we.'na.tʊ (Loss of Vowel Quantity)
-we.'na.tʊ => we.'na.to (Great Merger)
-we.'na.to => βe.'na.to (Forition of [w])
+'weː.na.tum => 'weː.na.tu (Elision of Word-Final [m])
+'weː.na.tu => 'we.na.tʊ (Loss of Vowel Quantity)
+'we.na.tʊ => 'we.na.to (Great Merger)
+'we.na.to => 'βe.na.to (Forition of [w])
 :era:
 Proto-Romance -> Western Romance
 :change:
-βe.'na.to => βe.'na.do (Lenition)
+'βe.na.to => 'βe.na.do (Lenition)
 :era:
 Western Romance -> Old Spanish
 :change:
-βe.'na.do => βe.'na.ðo (Lenition)
+'βe.na.do => 'βe.na.ðo (Lenition)
 :era:
 Old Spanish -> Modern Spanish
 :change:
-βe.'na.ðo => be.'na.ðo (Betacism)
+'βe.na.ðo => 'be.na.ðo (Betacism)
 
 :etymon:
 'pe.tram
@@ -138,12 +173,13 @@ Western Romance -> Old Spanish
 :change:
 'lu.tʃe => 'lu.tse (Fronting of [tʃ])
 'lu.tse => 'lu.dze (Lenition)
+'lu.dze => 'ludz (Apocope)
 :era:
 Old Spanish -> Modern Spanish
 :change:
-'lu.dze => 'lu.z̪e (Deaffrication of Dental Affricates)
-'lu.z̪e => 'lu.s̪e (Devoicing of Sibilants)
-'lu.s̪e => 'lu.θe (Desibilation of Dental Sibilants)
+'ludz => 'luz̪ (Deaffrication of Dental Affricates)
+'luz̪ => 'lus̪ (Devoicing of Sibilants)
+'lus̪ => 'luθ (Desibilation of Dental Sibilants)
 
 :etymon:
 's̺ko.lam
@@ -190,18 +226,19 @@ Old Spanish -> Modern Spanish
 Latin -> Proto-Romance
 :change:
 'ɸo.li̯a => 'ɸɔ.li̯a (Loss of Vowel Quantity)
-'ɸɔ.li̯a => 'ɸɔ.ʎa (Palatalization of [l])
+'ɸɔ.li̯a => 'ɸo.li̯a (Metaphony)
+'ɸo.li̯a => 'ɸo.ʎa (Palatalization of [l])
 :era:
 Western Romance -> Old Spanish
 :change:
-'ɸɔ.ʎa => 'ɸu̯e.ʎa (Diphthongization of [ɔ])
-'ɸu̯e.ʎa => 'ɸu̯e.ʒa (Spirantization of [ʎ])
+'ɸo.ʎa => 'ɸo.ʒa (Spirantization of [ʎ])
+'ɸo.ʒa => 'ho.ʒa (Debuccalization of [ɸ])
 :era:
 Old Spanish -> Modern Spanish
 :change:
-'ɸu̯e.ʒa => 'fu̯e.ʒa (Labiodentalization)
-'fu̯e.ʒa => 'fu̯e.ʃa (Devoicing of Sibilants)
-'fu̯e.ʃa => 'fu̯e.xa (Retraction of [ʃ])
+'ho.ʒa => 'o.ʒa (Deaspiration of [h])
+'o.ʒa => 'o.ʃa (Devoicing of Sibilants)
+'o.ʃa => 'o.xa (Retraction of [ʃ])
 
 :etymon:
 'ɸiː.li̯um
@@ -297,24 +334,57 @@ Western Romance -> Old Spanish
 'a.βre.go => 'a.βre.ɣo (Lenition)
 
 :etymon:
-'ɸiː.kum
+'ɸi.kum
 :era:
 Latin -> Proto-Romance
 :change:
-'ɸiː.kum => 'ɸiː.ku (Elision of Word-Final [m])
-'ɸiː.ku => 'ɸi.kʊ (Loss of Vowel Quantity)
-'ɸi.kʊ => 'ɸi.ko (Great Merger)
+'ɸi.kum => 'ɸi.ku (Elision of Word-Final [m])
+'ɸi.ku => 'ɸɪ.kʊ (Loss of Vowel Quantity)
+'ɸɪ.kʊ => 'ɸe.ko (Great Merger)
 :era:
 Proto-Romance -> Western Romance
 :change:
-'ɸi.ko => 'ɸi.go (Lenition)
+'ɸe.ko => 'ɸe.go (Lenition)
 :era:
 Western Romance -> Old Spanish
 :change:
-'ɸi.go => 'hi.go (Debuccalization of [ɸ])
-'hi.go => 'hi.ɣo (Lenition)
+'ɸe.go => 'he.go (Debuccalization of [ɸ])
+'he.go => 'he.ɣo (Lenition)
 :era:
 Old Spanish -> Modern Spanish
 :change:
-'hi.ɣo => 'i.ɣo (Deaspiration of [h])
+'he.ɣo => 'e.ɣo (Deaspiration of [h])
+
+:etymon:
+'jo.wis̺
+:era:
+Latin -> Proto-Romance
+:change:
+'jo.wis̺ => 'jɔ.wɪs̺ (Loss of Vowel Quantity)
+'jɔ.wɪs̺ => 'jɔ.wes̺ (Great Merger)
+'jɔ.wes̺ => 'dʒɔ.wes̺ (Forition of [j])
+'dʒɔ.wes̺ => 'dʒɔ.βes̺ (Forition of [w])
+:era:
+Western Romance -> Old Spanish
+:change:
+'dʒɔ.βes̺ => 'dʒu̯e.βes̺ (Diphthongization of [ɔ])
+:era:
+Old Spanish -> Modern Spanish
+:change:
+'dʒu̯e.βes̺ => 'ʒu̯e.βes̺ (Deaffrication of [dʒ])
+'ʒu̯e.βes̺ => 'ʃu̯e.βes̺ (Devoicing of Sibilants)
+'ʃu̯e.βes̺ => 'xu̯e.βes̺ (Retraction of [ʃ])
+
+:etymon:
+'an.num
+:era:
+Latin -> Proto-Romance
+:change:
+'an.num => 'an.nu (Elision of Word-Final [m])
+'an.nu => 'an.nʊ (Loss of Vowel Quantity)
+'an.nʊ => 'an.no (Great Merger)
+:era:
+Western Romance -> Old Spanish
+:change:
+'an.no => 'a.ɲo (Degemination)
 

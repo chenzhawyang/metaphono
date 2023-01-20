@@ -1,9 +1,7 @@
-signature HISTORY = sig
-    val historia : (string * (Rule.t list)) list
+structure History : sig 
+    val historia : (string * Rule.t list) list
     val pidal : Reflex.t -> Reflex.t
-end
-
-structure History : HISTORY = struct
+end = struct
     val historia =
         let val PrRom = PrRom.epoch
             val WRom = WRom.epoch
@@ -16,5 +14,5 @@ structure History : HISTORY = struct
             , MSp ]
         end            
 
-    val pidal = Reflex.apply_ll historia
+    val pidal = Reflex.apply_chg_ll historia
 end

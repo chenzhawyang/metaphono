@@ -1,0 +1,10 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+    ../sound-change/sound-change.mlb
+    ../reflex/reflex.mlb
+    ../epoch/epoch.mlb
+
+    history.sml
+in
+    structure History
+end

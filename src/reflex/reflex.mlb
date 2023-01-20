@@ -1,0 +1,10 @@
+local       
+    $(SML_LIB)/basis/basis.mlb
+    $(SML_LIB)/smlnj-lib/SExp/sexp-lib.mlb
+    ../phonology/phonology.mlb
+    ../sound-change/sound-change.mlb
+
+    reflex.sml
+in
+    structure Reflex
+end

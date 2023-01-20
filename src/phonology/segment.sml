@@ -14,6 +14,7 @@ signature VOWEL = sig
     datatype t = Vowel of height * centrality
 
     val toStr : t -> string
+    val fromStr : string -> t
 end
 
 structure Vowel : VOWEL = struct
@@ -40,7 +41,18 @@ structure Vowel : VOWEL = struct
       | toStr (Vowel (LowMid, Front)) = "ɛ"
       | toStr (Vowel (HighMid, Back)) = "ʊ"
       | toStr (Vowel (LowMid, Back)) = "ɔ"
-      | toStr _ = raise BadVowel
+      | toStr _ = raise BadVowel    
+
+    fun fromStr "a" = (Vowel (Low, Central))
+      | fromStr "e" = (Vowel (Mid, Front))
+      | fromStr "i" = (Vowel (High, Front))
+      | fromStr "o" = (Vowel (Mid, Back))
+      | fromStr "u" = (Vowel (High, Back))
+      | fromStr "ɪ" = (Vowel (HighMid, Front))
+      | fromStr "ɛ" = (Vowel (LowMid, Front))
+      | fromStr "ʊ" = (Vowel (HighMid, Back))
+      | fromStr "ɔ" = (Vowel (LowMid, Back))
+      | fromStr _ = raise BadVowel                            
 end
 
 signature CONSONANT = sig
@@ -68,6 +80,7 @@ signature CONSONANT = sig
     datatype t = Consonant of voice * place * manner    
 
     val toStr : t -> string
+    val fromStr : string -> t
 end
 
 structure Consonant : CONSONANT = struct
@@ -131,6 +144,44 @@ structure Consonant : CONSONANT = struct
       | toStr (Consonant (Voiced, Dental, Tap)) = "ɾ"
       | toStr (Consonant (Voiceless, Glottal, NonSibil)) = "h"
       | toStr _ = raise BadConsonant
+
+    fun fromStr "p" = (Consonant (Voiceless, Bilabial, Stop))
+      | fromStr "b" = (Consonant (Voiced, Bilabial, Stop))
+      | fromStr "ɸ" = (Consonant (Voiceless, Bilabial, NonSibil))
+      | fromStr "β" = (Consonant (Voiced, Bilabial, NonSibil))
+      | fromStr "m" = (Consonant (Voiced, Bilabial, Nasal))
+      | fromStr "f" = (Consonant (Voiceless, Labiodental, NonSibil))
+      | fromStr "t" = (Consonant (Voiceless, Dental, Stop))
+      | fromStr "d" = (Consonant (Voiced, Dental, Stop))
+      | fromStr "θ" = (Consonant (Voiceless, Dental, NonSibil))
+      | fromStr "ð" = (Consonant (Voiced, Dental, NonSibil))
+      | fromStr "n" = (Consonant (Voiced, Dental, Nasal))
+      | fromStr "s" = (Consonant (Voiceless, Alveolar, Sibilant))
+      | fromStr "z̺" = (Consonant (Voiced, Alveolar, Sibilant))
+      | fromStr "s̪" = (Consonant (Voiceless, Dental, Sibilant))
+      | fromStr "z̪" = (Consonant (Voiced, Dental, Sibilant))
+      | fromStr "ts" = (Consonant (Voiceless, Dental, Affricate))
+      | fromStr "dz" = (Consonant (Voiced, Dental, Affricate))
+      | fromStr "ʃ" = (Consonant (Voiceless, Palatal, Sibilant))
+      | fromStr "ʒ" = (Consonant (Voiced, Palatal, Sibilant))
+      | fromStr "tʃ" = (Consonant (Voiceless, Palatal, Affricate))
+      | fromStr "dʒ" = (Consonant (Voiced, Palatal, Affricate))
+      | fromStr "ɲ" = (Consonant (Voiced, Palatal, Nasal))
+      | fromStr "ʎ" = (Consonant (Voiced, Palatal, Lateral))
+      | fromStr "ʝ" = (Consonant (Voiced, Palatal, NonSibil))
+      | fromStr "k" = (Consonant (Voiceless, Velar, Stop))
+      | fromStr "g" = (Consonant (Voiced, Velar, Stop))
+      | fromStr "kʷ" = (Consonant (Voiceless, Labiovelar, Stop))
+      | fromStr "gʷ" = (Consonant (Voiced, Labiovelar, Stop))
+      | fromStr "x" = (Consonant (Voiceless, Velar, NonSibil))
+      | fromStr "ɣ" = (Consonant (Voiced, Velar, NonSibil))
+      | fromStr "j" = (Consonant (Voiced, Palatal, Approximant))
+      | fromStr "w" = (Consonant (Voiced, Labiovelar, Approximant))
+      | fromStr "l" = (Consonant (Voiced, Dental, Lateral))
+      | fromStr "r" = (Consonant (Voiced, Dental, Trill))
+      | fromStr "ɾ" = (Consonant (Voiced, Dental, Tap))
+      | fromStr "h" = (Consonant (Voiceless, Glottal, NonSibil))
+      | fromStr _ = raise BadConsonant
 end
 
 structure Seg = struct

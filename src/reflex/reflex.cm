@@ -1,0 +1,8 @@
+Group
+    structure Reflex
+is
+reflex.sml
+
+$/sexp-lib.cm
+../phonology/phonology.cm
+../sound-change/sound-change.cm

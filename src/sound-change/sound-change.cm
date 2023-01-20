@@ -1,0 +1,16 @@
+Group
+    (* rule.sml *)
+    structure Syllabism
+    structure Syllabism_L
+    structure Disyllabism
+    structure Rule
+
+    (* sound-changes.sml *)
+    structure Changes
+is
+rule.sml
+sound-change.sml
+sound-change-utils.sml
+
+../phonology/phonology.cm
+

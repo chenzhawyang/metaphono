@@ -1,0 +1,14 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+
+    ./phonology/phonology.mlb
+    ./sound-change/sound-change.mlb
+    ./reflex/reflex.mlb
+    ./epoch/epoch.mlb
+    ./history/history.mlb
+    ./utils/utils.mlb
+
+    main.sml
+in
+    structure Main
+end

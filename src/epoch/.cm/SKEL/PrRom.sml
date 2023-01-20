@@ -1,0 +1,2 @@
+Skeleton 5
+ad"PrRom"h2egp1d"Changes"f6d"Fortition"Cd"Seg"d"Monophthongization"d"T_Palatalization"d"K_Palatalization"d"Deaspiration"Cd"D_Palatalization"d"AtonicMerger"d"GreatMerger"d"LateralPalatalization"d"LossOfQuant"Cd"Metaphony"d"Prothesis"d"ElideWordFinalConsonant"d"G_Palatalization"d"NasalPalatalization"N

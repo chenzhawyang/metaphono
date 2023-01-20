@@ -1,0 +1,13 @@
+Group
+    structure PrRom
+    structure WRom
+    structure OSp
+    structure MSp
+is
+PrRom.sml
+WRom.sml
+OSp.sml
+MSp.sml
+
+../phonology/phonology.cm
+../sound-change/sound-change.cm

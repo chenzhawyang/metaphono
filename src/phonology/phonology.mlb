@@ -1,0 +1,21 @@
+ann
+    "allowExtendedTextConsts true"
+in
+    local 
+        $(SML_LIB)/basis/basis.mlb  
+        segment.sml
+        syllable.sml
+    in
+        (* segment.sml *)
+        structure Vowel
+        structure Consonant
+        structure Seg
+
+        (* syllable.sml *)
+        structure Onset
+        structure Nucleus
+        structure Coda
+        structure Syll
+        structure PWord
+    end
+end

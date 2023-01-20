@@ -1,0 +1,15 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+    ../phonology/phonology.mlb
+    ../sound-change/sound-change.mlb
+
+    PrRom.sml
+    WRom.sml
+    OSp.sml
+    MSp.sml
+in
+    structure PrRom
+    structure WRom
+    structure OSp
+    structure MSp
+end

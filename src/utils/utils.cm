@@ -1,0 +1,13 @@
+Group
+    structure Parse
+    structure Serialize
+is
+parse.sml
+serialize.sml
+
+../phonology/phonology.cm
+../reflex/reflex.cm
+
+$/basis.cm
+$/sexp-lib.cm
+$/pp-lib.cm

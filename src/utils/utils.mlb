@@ -1,0 +1,14 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+    $(SML_LIB)/smlnj-lib/SExp/sexp-lib.mlb
+    $(SML_LIB)/smlnj-lib/PP/pp-lib.mlb
+
+    ../phonology/phonology.mlb
+    ../reflex/reflex.mlb
+
+    parse.sml
+    serialize.sml
+in
+    structure Parse
+    structure Serialize
+end

@@ -1,18 +1,17 @@
 Group
+    (* segment.sml *)
     structure Vowel
     structure Consonant
     structure Seg
+
+    (* syllable.sml *)
     structure Onset
     structure Nucleus
     structure Coda
     structure Syll
     structure PWord
-
-    structure Syllabism
-    structure Syllabism_L
-    structure Disyllabism
-    structure Rule
 is
 segment.sml
 syllable.sml
-sound-change.sml
+
+$/basis.cm

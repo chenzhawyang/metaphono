@@ -8,6 +8,7 @@ signature ONSET = sig
                | PreinitCompl of Consonant.t * Consonant.t * Consonant.t
 
     val mk : Consonant.t list -> t
+    val fromStrL : string list -> t
 
     val toStr : t -> string
 end
@@ -54,6 +55,8 @@ structure Onset : ONSET = struct
                        else raise BadOnset
       | mk _ = raise BadOnset
 
+    val fromStrL = mk o List.map Consonant.fromStr
+
     fun toStr ZeroOnset = ""
       | toStr (Singleton cons) = Consonant.toStr cons
       | toStr (Complex (cons1, cons2)) = Consonant.toStr cons1 ^ Consonant.toStr cons2
@@ -73,6 +76,7 @@ signature NUCLEUS = sig
     val is_glide : Vowel.t -> bool
 
     val mk : Vowel.t list -> t
+    val fromStrL : string list -> t
 
     val toStr : t -> string
 end
@@ -90,6 +94,8 @@ structure Nucleus : NUCLEUS = struct
                     then LongVowel x
                     else Diphthong (x, y)
       | mk _ = raise BadNuc
+
+    val fromStrL = mk o List.map Vowel.fromStr
 
     fun is_yod v = (v = Seg.i)
     fun has_yod (Diphthong (v1, v2)) = is_yod v1
@@ -113,6 +119,7 @@ signature CODA = sig
                | PostCodaCompl of Consonant.t * Consonant.t * Consonant.t
 
     val mk : Consonant.t list -> t
+    val fromStrL : string list -> t
 
     val toStr : t -> string
 end
@@ -131,6 +138,8 @@ structure Coda : CODA = struct
       | mk [x, y, z] = PostCodaCompl (x, y, z)
       | mk _ = raise BadCoda
 
+    val fromStrL = mk o List.map Consonant.fromStr
+
     fun toStr ZeroCoda = ""
       | toStr (Coda cons) = Consonant.toStr cons
       | toStr (PostCoda (cons1, cons2)) = Consonant.toStr cons1 ^ Consonant.toStr cons2
@@ -139,6 +148,8 @@ structure Coda : CODA = struct
 end
 
 signature SYLL = sig
+    exception BadSyll
+
     datatype stress = Stressed | Unstressed
 
     datatype t = Syll of Onset.t * Nucleus.t * Coda.t * stress
@@ -147,11 +158,14 @@ signature SYLL = sig
     val stress_syll : t -> t
 
     val mk : (Consonant.t list * Vowel.t list * Consonant.t list) -> t
+    val fromStrLL : (string list) list -> t
 
     val toStr : t -> string
 end
 
 structure Syll : SYLL = struct
+    exception BadSyll
+
     datatype stress = Stressed | Unstressed
 
     datatype t = Syll of Onset.t * Nucleus.t * Coda.t * stress
@@ -167,6 +181,14 @@ structure Syll : SYLL = struct
             val nuc' = Nucleus.mk nuc
             val coda' = Coda.mk coda
         in Syll (on', nuc', coda', Unstressed) end
+
+    val fromStrLL = let fun aux [onset, nuc, coda] = 
+                            let val onset' = Onset.fromStrL onset
+                                val nuc' = Nucleus.fromStrL nuc
+                                val coda' = Coda.fromStrL coda
+                            in (onset', nuc', coda', Unstressed) end
+                          | aux _ = raise BadSyll
+                    in Syll o aux end
 
     fun toStr (Syll (on, nuc, cod, stress)) =
         let val on' = Onset.toStr on
